@@ -25,9 +25,7 @@
         <activity android:name=".BigNotificationActivity">
 
         </activity>
-        <receiver android:name=".NotificationReceiver" android:process=".remote">
 
-        </receiver>
     </application>
 
 </manifest>

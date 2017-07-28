@@ -1,9 +1,6 @@
 package com.galileo.androidbeginners.notificationtypes;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -35,34 +32,11 @@ public class ScheduleNotificationActivity extends AppCompatActivity{
         timeset = (TextInputEditText)findViewById(R.id.schedule_time_set);
     }
     public void scheduleNotification(View view){
-        if(validInputs()) {
-            Calendar mcurrentTime = Calendar.getInstance();
-            mcurrentTime.set(Calendar.HOUR_OF_DAY, Hour);
-            mcurrentTime.set(Calendar.MINUTE, Minute);
-            AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
-            Intent alert = new Intent(ScheduleNotificationActivity.this, NotificationReceiver.class);
-            alert.putExtra("title", title.getText().toString());
-            alert.putExtra("content", content.getText().toString());
-            PendingIntent pendingIntent = PendingIntent.getBroadcast(ScheduleNotificationActivity.this, 100, alert, PendingIntent.FLAG_UPDATE_CURRENT);
-            manager.set(AlarmManager.RTC, mcurrentTime.getTimeInMillis(), pendingIntent);
-        }
+
     }
 
     private boolean validInputs(){
-        boolean ret = true;
-        if(title.getText().toString().equals("")) {
-            tlayout.setError("Title Cannot be Empty");
-            ret = false;
-        }
-        if(content.getText().toString().equals("")) {
-            clayout.setError("Content Cannot be Empty");
-            ret = false;
-        }
-        if(timeset.getText().toString().equals("")) {
-            playout.setError("Must pick a Time");
-            ret = false;
-        }
-        return ret;
+        return false;
     }
     public void showTimePicker(View view) {
         Calendar mcurrentTime = Calendar.getInstance();

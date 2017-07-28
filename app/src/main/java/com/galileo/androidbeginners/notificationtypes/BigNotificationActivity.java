@@ -28,34 +28,10 @@ public class BigNotificationActivity extends AppCompatActivity{
     }
 
     public void createBigNotification(View view){
-        if(validInput()){
-            NotificationCompat.Builder notificationCompat =
-                    new NotificationCompat.Builder(this)
-                    .setSmallIcon(R.mipmap.ic_launcher)
-                    .setContentTitle(title.getText().toString())
-                    .setDefaults(Notification.DEFAULT_ALL)
-                    .setStyle(new NotificationCompat.BigTextStyle()
-                            .bigText(content.getText().toString())
-                            .setSummaryText("Big Announcement"))
-                    ;
-            NotificationManager mNotificationManager =
-                    (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
 
-            // Post the notification
-            mNotificationManager.notify("Nots",1, notificationCompat.build());
-        }
     }
 
     private boolean validInput() {
-        boolean ret = true;
-        if(title.getText().toString().equals("")){
-            ret=false;
-            tlayout.setError("title cannot be empty");
-        }
-        if(content.getText().toString().equals("")){
-            ret=false;
-            clayout.setError("title cannot be empty");
-        }
-        return ret;
+        return false;
     }
 }
