@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NotificationTypes</string>
+    <string name="schedule_a_notification">Schedule a Notification</string>
+    <string name="big_notification">Send a Big Notification</string>
+    <string name="stack_mesages_notification">Stack Mesages Notification</string>
+    <string name="input_notification_title">Notification Title</string>
+    <string name="input_notification_content">Notification Content</string>
+    <string name="time_for_notification">Time for Notification</string>
+    <string name="time_picker_button">Time Picker Button</string>
+    <string name="time">Time</string>
+    <string name="time_set">%1$s : %2$s</string>
+    <string name="create_big">Create a big Notification</string>
+    <string name="add_a_message">Add a message</string>
+    <string name="create_inbox_notification">Create Inbox Notification</string>
+    <string name="message1">Message no. 1</string>
+    <string name="message2">Message no. 2</string>
+    <string name="message3">Message no. 3</string>
+</resources>
