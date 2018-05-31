@@ -8,6 +8,10 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    /*TODO create the notification receiver, either one for all three or one for each
+      the ic_launcher icon in this project is non-adaptive, meaning you can safely
+       use it when sending notifications in Android O.
+       Always be sure to check  */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
